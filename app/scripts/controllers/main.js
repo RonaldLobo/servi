@@ -8,10 +8,11 @@
  * Controller of the serviApp
  */
 angular.module('serviApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl',['$scope','$resource','Usuario','Servicio', function ($scope,$resource,Usuario,Servicio) {
+    var Usuarios = Usuario.get(function() {
+      $scope.usuarios = Usuarios.usuarios;        
+	});
+	var Servicios = Servicio.get(function() {
+      $scope.clientes = Servicios.clientes;        
+	});
+}]);
