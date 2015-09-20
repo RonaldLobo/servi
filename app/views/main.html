@@ -1,3 +1,4 @@
+
 <div class="jumbotron">
   <h1>Bienvenido a Servi</h1>
   <p class="lead">
@@ -11,6 +12,16 @@
   <p>
     Hacemos todo lo posible por mantener nuestros servicios funcionales 24 horas 7 dias a la semana!
   </p>
+  <div ng-repeat="usuario in usuarios track by usuario.id">
+    {{usuario.id}}
+    {{usuario.nombre}}
+    {{usuario.appellido}}
+  </div>
+  <div ng-repeat="usuario in clientes track by usuario.id">
+    {{usuario.id}}
+    {{usuario.nombre}}
+    {{usuario.apellido}}
+  </div>
 
   <h4>Ganar , Ganar</h4>
   <p>Servi funciona bajo un metodo que intenta hacer ganar tanto al que necesita un servicio como al que lo ofrece!</p>
